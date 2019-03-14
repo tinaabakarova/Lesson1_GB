@@ -1,13 +1,14 @@
-import java.util.Arrays;
-import java.util.List;
+package classes;
 
-public class Team implements Command{
+import interfaces.*;
+
+public class Team implements CommandInterface {
     private String name;
-    private Sportsman[] team;
+    private AthleticInterface[] team;
 
-    public Team(String name, Sportsman... args) {
+    public Team(String name, AthleticInterface... args) {
         this.name = name;
-        team = new Sportsman[4];
+        team = new AthleticInterface[4];
         for (int i = 0; i < team.length; i++) {
             team[i] = args[i];
         }
@@ -18,8 +19,8 @@ public class Team implements Command{
     }
 
     @Override
-    public Sportsman[] endDistance(Sportsman[] team){
-        Sportsman[] winners = new Sportsman[team.length];
+    public AthleticInterface[] endDistance(AthleticInterface[] team) {
+        AthleticInterface[] winners = new Sportsman[team.length];
         for (int i = 0; i < team.length; i++) {
             if (team[i].isEndedDistance()){
                 winners[i] = team[i];
@@ -36,7 +37,7 @@ public class Team implements Command{
     }
 
     @Override
-    public Sportsman[] getTeam() {
+    public AthleticInterface[] getTeam() {
         return team;
     }
 }

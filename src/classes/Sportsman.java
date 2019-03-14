@@ -1,6 +1,9 @@
-import enums.*;
+package classes;
 
-public class Sportsman implements Athletic {
+import enums.*;
+import interfaces.*;
+
+public class Sportsman implements AthleticInterface {
     private String name;
     private Hardness strength;
     private boolean isEndedDistance = false;
