@@ -1,7 +1,11 @@
+package classes;
+
+import interfaces.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Course implements CourseInterface{
+public class Course implements CourseInterface {
    private List<Barrier> barriers;
 
     public Course(Barrier... args) {
@@ -12,8 +16,8 @@ public class Course implements CourseInterface{
     }
 
     @Override
-    public void doIt(Command team){
-        Athletic[] sportsmen = team.getTeam();
+    public void doIt(CommandInterface team){
+        AthleticInterface[] sportsmen = team.getTeam();
         for (int i = 0; i < sportsmen.length; i++) {
             for (int j = 0; j < barriers.size(); j++) {
                 if (!sportsmen[i].doBarrier(barriers.get(j))){
