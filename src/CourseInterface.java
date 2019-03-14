@@ -1,3 +1,3 @@
 public interface CourseInterface {
-    public void doIt(Command team);
+     void doIt(Command team);
 }

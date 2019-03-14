@@ -1,7 +1,7 @@
 public interface Athletic {
-    public void setEndedDistance(boolean endedDistance);
+    void setEndedDistance(boolean endedDistance);
 
-    public boolean isEndedDistance();
+    boolean isEndedDistance();
 
-    public boolean doBarrier(Barrier barrier);
+    boolean doBarrier(Barrier barrier);
 }

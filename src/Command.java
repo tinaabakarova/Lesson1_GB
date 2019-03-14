@@ -1,7 +1,7 @@
 public interface Command {
-    public Athletic[] endDistance(Athletic[] team);
+    Athletic[] endDistance(Athletic[] team);
 
-    public void teamInfo();
+    void teamInfo();
 
-    public Athletic[] getTeam();
+    Athletic[] getTeam();
 }
